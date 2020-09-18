@@ -1,0 +1,19 @@
+<!-- templates/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FieldList Example</title>
+</head>
+<body>
+    <form method="POST" action="">
+        {{ form.hidden_tag() }}
+        {{ form.category_name.label }} {{ form.category_name }}
+        <br />
+        {% for nested in form.products %}
+            {{ nested.label }}{{ nested }}
+        {% endfor %}
+        <button>Submit</button>
+    </form>
+</body>
+</html>
